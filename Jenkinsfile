@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label 'alyuan/centos6.5'
+      label 'maven'
     }
   }
 
@@ -10,40 +10,10 @@ pipeline {
     }
 
     stages {
-        stage ('unit test'1) {
+        stage ('unit test') {
             steps {
-                container ('alyuan/centos6.5') {
-                    sh 'echo test1'
-                }
-            }
-        }                
-    }
-	
-	stages {
-        stage ('unit test2') {
-            steps {
-                container ('alyuan/centos6.5') {
-                    sh 'echo test2'
-                }
-            }
-        }                
-    }
-	
-	stages {
-        stage ('unit test3') {
-            steps {
-                container ('alyuan/centos6.5') {
-                    sh 'echo test3'
-                }
-            }
-        }                
-    }
-	
-	stages {
-        stage ('unit test4') {
-            steps {
-                container ('alyuan/centos6.5') {
-                    sh 'sleep 600'
+                container ('maven') {
+                    sh 'echo hello'
                 }
             }
         }                
