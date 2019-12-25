@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label 'centos'
+      label 'jenkins/slave'
     }
   }
 
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage ('unit test') {
             steps {
-                container ('centos') {
+                container ('jenkins/slave') {
                     sh 'echo hello'
                 }
             }
