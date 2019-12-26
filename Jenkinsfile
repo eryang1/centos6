@@ -20,14 +20,14 @@ pipeline {
         stage ('unit test2') {
             steps {
                 container ('base') {
-                    sh 'echo 111 > /mnt/ey/test1'
+                    sh 'echo 111 > /mnt/test1'
                 }
             }
         }     
         stage ('unit test3') {
             steps {
                 container ('base') {
-                    sh 'echo 222 > /mnt/ey/test2'
+                    sh 'echo 222 > /mnt/test2'
                 }
             }
         }     
