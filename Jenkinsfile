@@ -34,7 +34,7 @@ pipeline {
         stage ('unit test4') {
             steps {
                 container ('base') {
-                    sh 'sleep 300'
+                    sh 'sleep 10'
                 }
             }
         }     
